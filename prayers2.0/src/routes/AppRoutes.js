@@ -4,6 +4,7 @@ import Contactanos from "../Components/Contactanos/Contactanos.js"
 import Header from '../Components/Header/Header.js'
 import Registro from "../Components/Registro.js"
 import Login from "../Components/Login.js"
+import { Footer } from '../Components/Footer/Footer.js'
 
 export const AppRoutes = () => {
     return (
@@ -17,7 +18,7 @@ export const AppRoutes = () => {
                 <Route path='/Contactanos' element={<Contactanos />} />
 
             </Routes>
-
+            <Footer></Footer>
         </HashRouter>
     )
 }

@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import "../globalCSS.css"
 
 export const Header = () => {
 
@@ -10,9 +11,7 @@ export const Header = () => {
 
 
     return (
-        <Navbar style={{
-            background: "#FFF4BD"
-        }} expand="lg" >
+        <Navbar className='yellow' expand="lg" >
             <Container>
                 <Navbar.Brand href="#home">Prayers Mx</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
