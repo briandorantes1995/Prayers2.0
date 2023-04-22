@@ -1,6 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
-import Contactanos from "./Contactanos/Contactanos.js"
+import Contactanos from "../Components/Contactanos/Contactanos.js"
+import Header from '../Components/Header/Header.js'
+import Registro from "../Components/Registro.js"
+import Login from "../Components/Login.js"
+
 export const AppRoutes = () => {
     return (
         <HashRouter hashType="slash">
@@ -9,12 +13,11 @@ export const AppRoutes = () => {
 
             <Routes>
                 <Route path='/' element={<Login />} />
-                <Route path='/Contactanos' element={<Contact />} />
+                <Route exact path="/registro" element={<Registro />} />
+                <Route path='/Contactanos' element={<Contactanos />} />
 
-                <Route path='*' element={<Error />} />
             </Routes>
 
-            <Footer />
         </HashRouter>
     )
 }

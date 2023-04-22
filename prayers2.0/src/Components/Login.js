@@ -10,7 +10,7 @@ function Login() {
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
     useEffect(() => {
-    }, [navigate,user, loading]);
+    }, [navigate, user, loading]);
     return (
         <div className="align">
             <div className="grid align__item">
@@ -29,7 +29,7 @@ function Login() {
                         <button className="btn-primary" onClick={() => signInWithEmailAndPassword(email, password)} >Iniciar Sesion </button>
                         <button className="btn-primary" onClick={signInWithGoogle}>Inicia Sesion con Google</button>
                     </div>
-                        No tienes Cuenta? <Link to="/registro">Registrate</Link> ahora.
+                    No tienes Cuenta? <Link to="/registro">Registrate</Link> ahora.
                 </div>
             </div>
         </div>
