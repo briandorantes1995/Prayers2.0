@@ -4,6 +4,11 @@ usaran para casi todos los componentes */
 /* Color palette for webpage
 https://www.canva.com/colors/color-palettes/pastel-blonde/
  */
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
 .yellow {
     background-color: #FFF4BD;
 }

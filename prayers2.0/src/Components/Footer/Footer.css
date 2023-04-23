@@ -1,9 +1,9 @@
-footer{
-    clear:both;
+footer {
+    clear: both;
     width: 100%;
     margin: 0px auto;
     background-color: #FFF4BD;
-    border:  1px solid lightgray;
+    border: 1px solid lightgray;
     border-bottom: none;
     border-radius: 8px 8px 0px 0px;
     height: auto;
