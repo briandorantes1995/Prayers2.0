@@ -40,7 +40,7 @@ function Registro() {
                         </div>
                         <button className="btn-primary" onClick={register}>Registrar</button>
                         <button  className="btn-primary" onClick={signInWithGoogle}>Registrate con  Google</button>
-                            Ya tienes cuenta? <Link to="/">Inicia sesion</Link>
+                            Ya tienes cuenta? <Link  to='login'>Inicia sesion</Link>
                     </div>
                 </div>
             </div>
