@@ -1,0 +1,14 @@
+footer{
+    clear:both;
+    width: 100%;
+    margin: 0px auto;
+    background: linear-gradient(to bottom,#FFF4BD 0px,antiquewhite 100%);
+    border:  1px solid lightgray;
+    border-bottom: none;
+    border-radius: 8px 8px 0px 0px;
+    height: auto;
+    padding: 15px;
+    text-align: Center;
+    position: fixed;
+    bottom: 0;
+}

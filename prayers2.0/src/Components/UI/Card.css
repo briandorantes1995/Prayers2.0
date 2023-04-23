@@ -1,7 +1,13 @@
+@font-face {
+    font-family:Bruno;
+    src: url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+}
+
 .card{
     width: 250px; background: #232323;
     display: flex; flex-direction: column; align-items: center; border-radius: 10px;
     padding: 5px 10px; position: relative; overflow: hidden;
+    font-family: Bruno, cursive;
 }
 
 •card::before,
