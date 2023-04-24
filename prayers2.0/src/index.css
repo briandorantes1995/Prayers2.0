@@ -1,0 +1,28 @@
+/* Archivo css para establecer estilos que se
+usaran para casi todos los componentes */
+
+/* Color palette for webpage
+https://www.canva.com/colors/color-palettes/pastel-blonde/
+ */
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE3E6;
+}
+
+
+.blue {
+    background-color: #90a8ee;
+}
+
+.yellow {
+    background-color: #f0f131;
+}
+
+.green {
+    background-color: #B5EECB;
+}
+
+.gray {
+    background-color: #DAE3E6;
+}
