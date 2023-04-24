@@ -7,7 +7,9 @@ https://www.canva.com/colors/color-palettes/pastel-blonde/
 
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE3E6;
 }
+
 
 .blue {
     background-color: #90a8ee;
@@ -19,4 +21,8 @@ body {
 
 .green {
     background-color: #B5EECB;
+}
+
+.gray {
+    background-color: #DAE3E6;
 }
