@@ -1,9 +1,10 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import "../../index.css"
 
 export default function Footer() {
     return (
-        <MDBFooter bgColor='light' className='text-center text-muted fixed-bottom'>
+        <MDBFooter className='text-center  fixed-bottom green'>
 
             <section className='d-flex justify-content-between p-4 border-bottom'>
                 <div className=''>&copy; Players Web - 2023</div>

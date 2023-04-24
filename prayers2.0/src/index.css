@@ -9,18 +9,14 @@ body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
+.blue {
+    background-color: #90a8ee;
+}
+
 .yellow {
-    background-color: #FFF4BD;
+    background-color: #f0f131;
 }
 
-.roseQuartz {
-    background-color: #F4B9B8;
-}
-
-.spearmint {
-    background-color: #85D2D0;
-}
-
-.purple {
-    background-color: #887BB0;
+.green {
+    background-color: #B5EECB;
 }
