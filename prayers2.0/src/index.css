@@ -26,3 +26,7 @@ body {
 .gray {
     background-color: #DAE3E6;
 }
+
+.yellow-text {
+    color: #f0f131 !important;
+}

@@ -2,3 +2,7 @@
     color: inherit;
     text-decoration: inherit;
 }
+
+.title-size {
+    font-size: 2rem;
+}

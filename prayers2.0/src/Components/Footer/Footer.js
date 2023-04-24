@@ -4,7 +4,7 @@ import "../../index.css"
 
 export default function Footer() {
     return (
-        <MDBFooter className='text-center  fixed-bottom green'>
+        <MDBFooter className='text-center  fixed-bottom blue yellow-text h5 mb-0' >
 
             <section className='d-flex justify-content-between p-4 border-bottom'>
                 <div className=''>&copy; Players Web - 2023</div>

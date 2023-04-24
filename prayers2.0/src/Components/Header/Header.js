@@ -12,7 +12,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { NavLink, Link } from 'react-router-dom';
 import "./Header.css"
-
+import "../../index.css"
 
 export default function Header() {
     const [showNavSecond, setShowNavSecond] = useState(false);
@@ -21,9 +21,10 @@ export default function Header() {
     let getUser = JSON.parse(localStorage.getItem('user-info'))
 
     return (
-        <MDBNavbar expand='lg' light className='blue mb-5'>
-            <MDBContainer fluid>
-                <MDBNavbarBrand href='#'>Prayers</MDBNavbarBrand>
+        <MDBNavbar expand='lg' className='blue mb-5 yellow-text py-3 px-2 h5'>
+            <MDBContainer fluid >
+                <MDBNavbarBrand href='#' className=' yellow-text title-size'>Prayers</MDBNavbarBrand>
+
                 <MDBNavbarToggler
                     aria-expanded='false'
                     aria-label='Toggle navigation'
@@ -32,13 +33,14 @@ export default function Header() {
                     <MDBIcon icon='bars' fas />
                 </MDBNavbarToggler>
                 <MDBCollapse navbar show={showNavSecond}>
-                    <MDBNavbarNav className='justify-content-start'>
+                    <MDBNavbarNav className='justify-content-start  '>
 
-                        <MDBNavbarLink>
-                            <NavLink className='align-self-center text-decoration-none text-reset' to="/">Inicio</NavLink>
+                        <MDBNavbarLink >
+
+                            <NavLink className='align-self-center text-decoration-none text-reset yellow-text' to="/">Inicio</NavLink>
                         </MDBNavbarLink>
                         <MDBNavbarLink>
-                            <NavLink className='align-self-center text-decoration-none text-reset' to="/Carrito">Carrito</NavLink>
+                            <NavLink className='align-self-center text-decoration-none text-reset yellow-text' to="/Carrito">Carrito</NavLink>
                         </MDBNavbarLink>
                         {/* <MDBNavbarLink>
                             <NavLink className='align-self-center text-decoration-none text-reset' to="/">Inicio</NavLink>
@@ -46,11 +48,13 @@ export default function Header() {
 
 
                     </MDBNavbarNav>
-                    <MDBNavbarNav className='justify-content-end'>
+                    <MDBNavbarNav className='justify-content-end '>
 
                         {getUser
-                            ? <MDBNavbarLink className="">{getUser.nombre}</MDBNavbarLink>
-                            : <MDBNavbarLink href="registro" className="justify-content-end">Registrate</MDBNavbarLink>}
+                            ? <MDBNavbarLink className="yellow-text">{getUser.nombre}</MDBNavbarLink>
+                            : <MDBNavbarLink href="registro" className="justify-content-end yellow-text">
+                                <NavLink className='align-self-center text-decoration-none text-reset yellow-text' to="/Registro">Registrate</NavLink>
+                            </MDBNavbarLink>}
 
 
 
