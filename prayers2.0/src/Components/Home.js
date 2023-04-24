@@ -2,11 +2,12 @@ import React from 'react'
 import Header from "./Header/Header";
 import Productos from "./Productos";
 import Footer from "./Footer/Footer";
+import Carousel from "./Carousel/Carousel"
 const Home = () => {
     return (
         <div>
             <Header></Header>
-            <Productos></Productos>
+            <Carousel></Carousel>
             <Footer></Footer>
         </div>
 
