@@ -1,8 +1,10 @@
 import React from 'react'
 import './Card.css'
+import {Link} from 'react-router-dom'
 
 function Card({ product }) {
     return (
+        <Link to={`/producto/${product.id}`}>
         <div className="card mb-3 mx-2">
             <div className="img_container">
                 <img
@@ -18,6 +20,7 @@ function Card({ product }) {
                 <button className="btn_addtocart">Add To Cart </button>
             </div>
         </div>
+            </Link>
     )
 }
 export default Card;
