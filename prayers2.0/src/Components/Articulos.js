@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from "./Header/Header";
+import Productos from "./Productos";
 import Footer from "./Footer/Footer";
-import Carousel from "./Carousel/Carousel"
-const Home = () => {
+const Articulos = () => {
     return (
         <div>
             <Header></Header>
-            <Carousel></Carousel>
+            <Productos></Productos>
             <Footer></Footer>
         </div>
 
-)
+    )
 }
-export default Home
+export default Articulos

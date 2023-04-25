@@ -10,7 +10,7 @@ import {
     MDBIcon,
     MDBCollapse
 } from 'mdb-react-ui-kit';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, } from 'react-router-dom';
 import "./Header.css"
 import "../../index.css"
 
@@ -39,12 +39,12 @@ export default function Header() {
 
                             <NavLink className='align-self-center text-decoration-none text-reset yellow-text' to="/">Inicio</NavLink>
                         </MDBNavbarLink>
+                        {<MDBNavbarLink>
+                            <NavLink className='align-self-center text-decoration-none text-reset' to="/articulos">Articulos</NavLink>
+                        </MDBNavbarLink>}
                         <MDBNavbarLink>
                             <NavLink className='align-self-center text-decoration-none text-reset yellow-text' to="/Carrito">Carrito</NavLink>
                         </MDBNavbarLink>
-                        {/* <MDBNavbarLink>
-                            <NavLink className='align-self-center text-decoration-none text-reset' to="/">Inicio</NavLink>
-                        </MDBNavbarLink> */}
 
 
                     </MDBNavbarNav>
