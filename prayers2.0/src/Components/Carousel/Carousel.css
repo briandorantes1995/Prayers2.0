@@ -1,0 +1,25 @@
+.carousel-img {
+    object-fit: cover;
+    width: 100%;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-wrapper {
+    height: 500px;
+    width: 100;
+}
+
+.first {
+    object-position: 10% 10%;
+}
+
+
+.second {
+    object-position: 10% 70%;
+}
+
+.fourth {
+    object-position: 10% 45%;
+}
