@@ -20,7 +20,7 @@ export default function Header() {
     let getUser = JSON.parse(localStorage.getItem('user-info'))
 
     return (
-        <MDBNavbar expand='lg' className='blue mb-5 yellow-text py-3 px-2 h5'>
+        <MDBNavbar expand='lg' className='blue mb-0 yellow-text py-3 px-2 h5'>
             <MDBContainer fluid >
                 <MDBNavbarBrand href='#' className=' yellow-text'>Prayers</MDBNavbarBrand>
 
