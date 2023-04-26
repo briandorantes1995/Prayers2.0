@@ -7,7 +7,7 @@ import "./Carousel.css"
 
 export default function App() {
     return (
-        <MDBCarousel showIndicators showControls fade className='carousel-wrapper  '>
+        <MDBCarousel showIndicators showControls fade className='carousel-wrapper'>
             <MDBCarouselItem
                 className='d-block carousel-img first'
                 itemId={1}
