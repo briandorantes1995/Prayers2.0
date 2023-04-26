@@ -3,17 +3,20 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom'
-import reportWebVitals from './reportWebVitals'
-import { UserContextProvider } from "./Context/userContext";;
+import { BrowserRouter } from 'react-router-dom';
+import reportWebVitals from './reportWebVitals';
+import { UserContextProvider } from "./Context/userContext";
+import { CarritoContexProvider } from "./Context/carritoContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <UserContextProvider>
+        <CarritoContexProvider>
         <BrowserRouter>
             <App />
         </BrowserRouter>
+        </CarritoContexProvider>
     </UserContextProvider>
 );
 
