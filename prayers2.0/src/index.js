@@ -6,17 +6,17 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { UserContextProvider } from "./Context/userContext";
-import { CarritoContexProvider } from "./Context/carritoContext";
+import { CarritoContextProvider } from "./Context/carritoContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <UserContextProvider>
-        <CarritoContexProvider>
+        <CarritoContextProvider>
         <BrowserRouter>
-            <App />
+            <App/>
         </BrowserRouter>
-        </CarritoContexProvider>
+        </CarritoContextProvider>
     </UserContextProvider>
 );
 

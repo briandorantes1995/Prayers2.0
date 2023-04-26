@@ -9,7 +9,6 @@ const Home = () => {
             <Carousel></Carousel>
             <Footer></Footer>
         </div>
-
 )
 }
 export default Home

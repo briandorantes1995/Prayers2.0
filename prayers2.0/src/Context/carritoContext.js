@@ -2,8 +2,8 @@ import React, {useState,useContext,createContext} from "react"
 
 export const CarritoContext = createContext();
 
-export const UserContextProvider = ({children})=>{
-    const [carrito,setCarrito] = useState(null);
+export const CarritoContextProvider = ({children})=>{
+    const [carrito,setCarrito] = useState([]);
     return(
         <CarritoContext.Provider value ={{carrito,setCarrito}}>
             {children}

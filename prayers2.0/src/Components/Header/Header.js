@@ -35,7 +35,7 @@ export default function Header() {
                     <MDBNavbarNav className='justify-content-start'>
                         <MDBNavbarLink className="yellow-text" href="/">Inicio</MDBNavbarLink>
                         <MDBNavbarLink className="yellow-text" href="/articulos">Articulos</MDBNavbarLink>
-                        <MDBNavbarLink className="yellow-text" href="/">Carrito</MDBNavbarLink>
+                        <MDBNavbarLink className="yellow-text" href="/carrito">Carrito</MDBNavbarLink>
                     </MDBNavbarNav>
 
                     <MDBNavbarNav className='justify-content-end '>
