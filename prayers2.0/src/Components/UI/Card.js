@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 function Card({ product }) {
     console.log(product.id)
     return (
-        <Link to={{ pathname: `/producto/${product?.id}`, state: { product } }} >
+        <Link to={{ pathname: `/producto/${product?.id}`, state: { articulo: product } }} >
             <div className="card mb-3 mx-2">
                 <div className="img_container">
                     <img

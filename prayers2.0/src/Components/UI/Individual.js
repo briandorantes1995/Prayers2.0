@@ -15,19 +15,22 @@ import {
 
 
 function Individual({ articulo }) {
-    console.log(articulo)
+    // console.log(articulo)
     const { carrito, setCarrito } = useCarritoContext();
-    const location = useLocation()
+
     function addToCart() {
         setCarrito([...carrito, articulo]);
     }
-    useEffect(() => {
-        if (location) {
-            console.log(location)
-            const producto = location.state
 
-        }
-    }, []);
+    function deleteFromCart() {
+        const carritoActualizado = carrito.filter((producto) => {
+            // console.log(producto.id != articulo.id)
+            return producto.id != articulo.id
+        })
+        setCarrito(carritoActualizado);
+        // console.log(carritoActualizado)
+    }
+
     return (
         <div className='position-absolute top-50 start-50 translate-middle container-lg' >
             <MDBCard style={{ background: "#f5f5f5", }} className='w-75 w-lg-50 h-100 m-auto' alignment='center'>
@@ -54,6 +57,9 @@ function Individual({ articulo }) {
                                     <path
                                         d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
                                 </svg>
+                            </MDBBtn>
+                            <MDBBtn onClick={deleteFromCart} className="btn w-50 mb-0" typw="btn">
+                                Delete
                             </MDBBtn>
                         </MDBCardBody>
                     </MDBCol>

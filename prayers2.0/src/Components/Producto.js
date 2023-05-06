@@ -7,6 +7,7 @@ import Individual from "./UI/Individual";
 function Producto() {
     const { id } = useParams();
     const [productInfo, setProductInfo] = useState(null);
+    console.log(productInfo)
     useEffect(() => {
         async function getProductInfo() {
             const productInfo = await getProductByID(id);
