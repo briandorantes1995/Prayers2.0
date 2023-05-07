@@ -1,17 +1,19 @@
 import React from 'react'
 import {useCarritoContext} from "../Context/carritoContext";
 import Card from "./UI/Card";
+import "./UI/Individual.css"
+import "./Carrito.css"
 
 function CarritoComponent(){
     const { carrito } = useCarritoContext();
-    console.log(carrito);
     return(
-        <div>
+        <section className="carrito">
             {carrito?.map((producto) =>(
                 <Card product={producto} />
                 )
             )}
-        </div>
+            <button className="compra-button">Comprar</button>
+        </section>
     );
 }
 

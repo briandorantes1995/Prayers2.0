@@ -8,10 +8,8 @@ import Home from "./Components/Home";
 import Articulos from "./Components/Articulos";
 import Producto from "./Components/Producto";
 import Carrito from "./Components/Carrito";
-
 function App() {
     return (
-
         <Routes >
             <Route  path='/' element={<Home/>}/>
             <Route  path='/producto/:id' element={<Producto/>}/>

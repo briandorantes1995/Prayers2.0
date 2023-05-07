@@ -1,0 +1,14 @@
+.carrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comprar-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
