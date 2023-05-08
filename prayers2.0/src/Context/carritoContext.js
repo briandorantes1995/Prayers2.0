@@ -36,3 +36,12 @@ export const useCarritoContext = () => {
     return context;
 
 }
+
+export const deleteCarritoItems = (setCarrito) => {
+    setCarrito([]);
+}
+
+export const emailCarritoItems = (setCarrito) => {
+    deleteCarritoItems(setCarrito)
+
+}
