@@ -20,11 +20,31 @@ function Individual({ articulo }) {
     // console.log(articulo)
     const { carrito, setCarrito } = useCarritoContext();
     const [cantidad, setCantidad] = useState(1);
+    console.log(carrito)
+
     function addToCart() {
-        articulo.cantidad = cantidad;
-        setCarrito([...carrito, articulo]);
+        const exist = carrito.find((producto) => {
+            return producto.id == articulo.id
+        })
+
+        if (exist) {
+            const inCarrito = carrito.map((producto => {
+                if (producto.id == articulo.id) {
+                    return { ...producto, cantidad: cantidad }
+                }
+                return producto
+            }))
+            setCarrito(inCarrito)
+        } else {
+            articulo.cantidad = cantidad
+            setCarrito([...carrito, articulo])
+        }
+
     }
 
+    function findArticle(a) {
+
+    }
     function deleteFromCart() {
         const carritoActualizado = carrito.filter((producto) => {
             // console.log(producto.id != articulo.id)
@@ -68,7 +88,7 @@ function Individual({ articulo }) {
                             <MDBContainer className='mt-3 w-50'>
                                 <MDBRow>
                                     <h5 className='fw-bold text-start '>Cantidad: </h5>
-                                    <MDBInput id='typeNumber' type='number' min="1" onChange={(event) => {
+                                    <MDBInput id='typeNumber' type='number' min="1" value="1" onChange={(event) => {
                                         setCantidad(event.target.value);
                                     }} />
                                 </MDBRow>

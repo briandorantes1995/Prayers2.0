@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import {auth, registerWithEmailAndPassword, signInWithGoogle,} from "../firebaseConfig";
+import { auth, registerWithEmailAndPassword, signInWithGoogle, } from "../firebaseConfig";
+import loginEmail from "../Functions/loginEmail";
 import './Registro.css';
 
 // Funcion Registro Usuario
@@ -11,14 +12,24 @@ function Registro() {
     const [name, setName] = useState("");
     const [user, loading, error] = useAuthState(auth);
     const history = useNavigate();
-    const register = () => {
+    const navigate = useNavigate();
+    const register = async () => {
         if (!name) alert("Please enter name");
-        registerWithEmailAndPassword(name, email, password);
+        try {
+            await registerWithEmailAndPassword(name, email, password);
+            const cuenta = await loginEmail(email, password);
+            console.log(cuenta);
+
+            navigate("/");
+        } catch (error) {
+            console.log(error)
+        }
+
     };
     useEffect(() => {
-    }, [history,user, loading]);
+    }, [history, user, loading]);
 
-    return(
+    return (
         <div className="align">
             <div className="grid align__item">
                 <div className="register">
@@ -31,15 +42,15 @@ function Registro() {
                         </div>
                         <div className="form__field">
                             <label>Correo: </label>
-                            <input type="email" placeholder="info@mailaddress.com" value = {email} className="form-control" onChange={(e) => setEmail(e.target.value)} />
+                            <input type="email" placeholder="info@mailaddress.com" value={email} className="form-control" onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="form__field">
                             <label>Contraseña: </label>
-                            <input type="password" placeholder="••••••••••••" value = {password} className="form-control" onChange={(e) => setPassword(e.target.value)} />
+                            <input type="password" placeholder="••••••••••••" value={password} className="form-control" onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <button className="btn-primary" onClick={register}>Registrate</button>
-                        <button  className="btn-primary" onClick={signInWithGoogle}>Registrate con  Google</button>
-                            Ya tienes cuenta? <Link  to='/login'>Inicia sesion</Link>
+                        <button className="btn-primary" onClick={signInWithGoogle}>Registrate con  Google</button>
+                        Ya tienes cuenta? <Link to='/login'>Inicia sesion</Link>
                     </div>
                 </div>
             </div>

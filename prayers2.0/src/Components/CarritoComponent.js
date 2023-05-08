@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCarritoContext, emailCarritoItems } from "../Context/carritoContext";
-import Card from "./UI/Card";
+import CarritoCard from './CarritoCard/CarritoCard';
 import "./UI/Individual.css"
 import "./Carrito.css"
 
@@ -10,9 +10,9 @@ function CarritoComponent() {
     //IF lo esta entonces le puede dar a comprar
     //ELSE si no lo esta le aparece un pop up donde le pide registrarse
     return (
-        <section className="carrito">
+        <section className="carrito mt-2">
             {carrito?.map((producto) => (
-                <Card product={producto} />
+                <CarritoCard product={producto} />
             )
             )}
             <button className="compra-button" onClick={() => emailCarritoItems(setCarrito)} >Comprar</button>
