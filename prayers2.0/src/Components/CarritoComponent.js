@@ -6,16 +6,26 @@ import "./Carrito.css"
 
 function CarritoComponent() {
     const { carrito, setCarrito } = useCarritoContext();
-    //crear una funcion donde revise si el usuario esta registrado o no
-    //IF lo esta entonces le puede dar a comprar
-    //ELSE si no lo esta le aparece un pop up donde le pide registrarse
+    function isUser() {
+        //crear una funcion donde revise si el usuario esta registrado o no
+        //modificar esta linea
+        return true
+    }
+
     return (
         <section className="carrito mt-2">
             {carrito?.map((producto) => (
                 <CarritoCard product={producto} />
             )
             )}
-            <button className="compra-button" onClick={() => emailCarritoItems(setCarrito)} >Comprar</button>
+            <button className="compra-button" onClick={() => {
+                if (isUser()) {
+                    emailCarritoItems(setCarrito)
+                    alert("Su producto ha sido comprado con exito")
+                } else {
+                    alert("Tiene que registrarse para poder comprar")
+                }
+            }} >Comprar</button>
         </section >
     );
 }
