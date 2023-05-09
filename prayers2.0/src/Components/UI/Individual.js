@@ -45,8 +45,6 @@ function Individual({ articulo }) {
     function findArticle(a) {
 
     }
-<<<<<<< HEAD
-=======
     function deleteFromCart() {
         const carritoActualizado = carrito.filter((producto) => {
             // console.log(producto.id != articulo.id)
@@ -55,7 +53,6 @@ function Individual({ articulo }) {
         setCarrito(carritoActualizado);
         // console.log(carritoActualizado)
     }
->>>>>>> 62217df82d91aa01d75eb588966ba61506923a9e
 
     return (
         <div className='position-absolute top-50 start-50 translate-middle container-lg' >

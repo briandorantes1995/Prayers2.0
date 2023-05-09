@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './CarritoCard.css'
-import { Link, useLocation } from 'react-router-dom'
 import {
     MDBRow,
     MDBContainer,
-    MDBInput
+    MDBInput,
+    MDBBtn
 } from 'mdb-react-ui-kit';
 import { useCarritoContext, CarritoContext } from "../../Context/carritoContext";
 import { useUserContext } from '../../Context/userContext';
