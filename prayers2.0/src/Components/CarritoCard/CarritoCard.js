@@ -19,15 +19,16 @@ function CarritoCard({ product }) {
         // setCarrito([...carrito, articulo]);
     }
 
+
     function deleteFromCart() {
-        // const carritoActualizado = carrito.filter((producto) => {
-        //     // console.log(producto.id != articulo.id)
-        //     return producto.id != articulo.id
-        // })
-        // setCarrito(carritoActualizado);
-        // // console.log(carritoActualizado)
+        const carritoActualizado = carrito.filter((producto) => {
+            // console.log(producto.id != articulo.id)
+            return producto.id != product.id
+        })
+        setCarrito(carritoActualizado);
+        // console.log(carritoActualizado)
+        console.log(product.id)
     }
-    console.log(product.id)
     return (
 
         <div className="card mb-3 mx-2">
@@ -39,7 +40,7 @@ function CarritoCard({ product }) {
             <br />
             <div className="card_content">
                 <h2 className="nft_name">{product?.name}</h2>
-                <p className="nft_price">$ {product?.price.unit_amount / 100} {product?.price.currency}</p>
+                <p className="nft_price">$ {(product?.price.unit_amount / 100) * cantidad} {product?.price.currency}</p>
             </div>
             <MDBContainer className='mt-3  text-white'>
                 <MDBRow>
@@ -49,6 +50,10 @@ function CarritoCard({ product }) {
                     }} />
                 </MDBRow>
 
+
+                <MDBBtn onClick={deleteFromCart} className="btn my-2 mb-0" typw="btn">
+                    Delete
+                </MDBBtn>
             </MDBContainer>
         </div>
     )

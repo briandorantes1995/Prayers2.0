@@ -45,14 +45,6 @@ function Individual({ articulo }) {
     function findArticle(a) {
 
     }
-    function deleteFromCart() {
-        const carritoActualizado = carrito.filter((producto) => {
-            // console.log(producto.id != articulo.id)
-            return producto.id != articulo.id
-        })
-        setCarrito(carritoActualizado);
-        // console.log(carritoActualizado)
-    }
 
     return (
         <div className='position-absolute top-50 start-50 translate-middle container-lg' >
@@ -68,7 +60,7 @@ function Individual({ articulo }) {
                                 {articulo?.description}
                             </MDBCardText>
                             <MDBCardText>
-                                <small className='text-muted'>{articulo?.price.unit_amount / 100} </small>
+                                <small className='text-muted'>{(articulo?.price.unit_amount / 100)} </small>
 
                             </MDBCardText>
                             <MDBBtn onClick={addToCart} className="btn w-25 mx-3 mb-0" typw="btn">
@@ -82,13 +74,11 @@ function Individual({ articulo }) {
                                 </svg>
                             </MDBBtn>
 
-                            <MDBBtn onClick={deleteFromCart} className="btn w-25 mx-3 mb-0" typw="btn">
-                                Delete
-                            </MDBBtn>
+
                             <MDBContainer className='mt-3 w-50'>
                                 <MDBRow>
                                     <h5 className='fw-bold text-start '>Cantidad: </h5>
-                                    <MDBInput id='typeNumber' type='number' min="1" value="1" onChange={(event) => {
+                                    <MDBInput id='typeNumber' type='number' min="1" value={cantidad} onChange={(event) => {
                                         setCantidad(event.target.value);
                                     }} />
                                 </MDBRow>
