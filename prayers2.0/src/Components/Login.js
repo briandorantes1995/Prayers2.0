@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 import {signInWithGoogle } from '../firebaseConfig';
 import './Registro.css';
 import loginEmail from "../Functions/loginEmail";
@@ -8,11 +8,19 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const {user} = useUserContext();
+    const navigate = useNavigate();
     useEffect(() => {
-    }, [user]);
+    }, [user,navigate]);
     async function login() {
         const cuenta = await loginEmail(email, password);
+        navigate("/")
     }
+
+    async function google(){
+        signInWithGoogle();
+        navigate("/")
+    }
+    
     return (
         <div className="align">
             <div className="grid align__item">
@@ -29,7 +37,7 @@ function Login() {
                             <input type="password" value={password} placeholder="••••••••••••" onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <button className="btn-primary" onClick={login}>Iniciar Sesion </button>
-                        <button className="btn-primary" onClick={signInWithGoogle}>Inicia Sesion con Google</button>
+                        <button className="btn-primary" onClick={google}>Inicia Sesion con Google</button>
                     </div>
                     No tienes Cuenta? <Link to="/registro">Registrate</Link>
                 </div>
