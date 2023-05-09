@@ -3,13 +3,11 @@ import './CarritoCard.css'
 import { Link, useLocation } from 'react-router-dom'
 import {
     MDBRow,
-    MDBCol,
-    MDBBtn,
     MDBContainer,
     MDBInput
 } from 'mdb-react-ui-kit';
 import { useCarritoContext, CarritoContext } from "../../Context/carritoContext";
-
+import { useUserContext } from '../../Context/userContext';
 function CarritoCard({ product }) {
     const { carrito, setCarrito } = useCarritoContext();
     const [cantidad, setCantidad] = useState(product.cantidad);

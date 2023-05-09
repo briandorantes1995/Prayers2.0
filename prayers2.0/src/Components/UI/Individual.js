@@ -24,12 +24,12 @@ function Individual({ articulo }) {
 
     function addToCart() {
         const exist = carrito.find((producto) => {
-            return producto.id == articulo.id
+            return producto.id === articulo.id
         })
 
         if (exist) {
             const inCarrito = carrito.map((producto => {
-                if (producto.id == articulo.id) {
+                if (producto.id === articulo.id) {
                     return { ...producto, cantidad: cantidad }
                 }
                 return producto
@@ -45,6 +45,17 @@ function Individual({ articulo }) {
     function findArticle(a) {
 
     }
+<<<<<<< HEAD
+=======
+    function deleteFromCart() {
+        const carritoActualizado = carrito.filter((producto) => {
+            // console.log(producto.id != articulo.id)
+            return producto.id !== articulo.id
+        })
+        setCarrito(carritoActualizado);
+        // console.log(carritoActualizado)
+    }
+>>>>>>> 62217df82d91aa01d75eb588966ba61506923a9e
 
     return (
         <div className='position-absolute top-50 start-50 translate-middle container-lg' >

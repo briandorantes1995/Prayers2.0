@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
+import {useUserContext} from "../../Context/userContext";
 import {
     MDBContainer,
     MDBNavbar,
     MDBNavbarBrand,
     MDBNavbarToggler,
     MDBNavbarNav,
-    MDBNavbarItem,
     MDBNavbarLink,
     MDBIcon,
-    MDBCollapse
+    MDBCollapse, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle, MDBDropdown
 } from 'mdb-react-ui-kit';
 import "./Header.css"
 import "../../index.css"
-
+import cerrarSesion from "../../Functions/cerrarSesion";
 export default function Header() {
     const [showNavSecond, setShowNavSecond] = useState(false);
-
-    //Modificar esta linea cuando se haga la conexion a la db
-    let getUser = JSON.parse(localStorage.getItem('user-info'))
-
+    const {user} = useUserContext();
     return (
         <MDBNavbar expand='lg' className='blue mb-0 yellow-text py-3 px-2 h5'>
             <MDBContainer fluid >
@@ -39,11 +36,19 @@ export default function Header() {
                     </MDBNavbarNav>
 
                     <MDBNavbarNav className='justify-content-end '>
-                        {getUser
-                            ? <MDBNavbarLink className="yellow-text">{getUser.nombre}</MDBNavbarLink>
-                            : <MDBNavbarLink href="/registro" className="justify-content-end yellow-text">
-                                Registrate
-                            </MDBNavbarLink>}
+                        {user
+                            ?<MDBDropdown>
+                        <MDBDropdownToggle tag='a' className="yellow-text" role='button'>
+                            <MDBNavbarLink className="yellow-text">{user.email}</MDBNavbarLink>
+                        </MDBDropdownToggle>
+                        <MDBDropdownMenu>
+                            <MDBDropdownItem link>Perfil</MDBDropdownItem>
+                            <MDBDropdownItem link onClick={cerrarSesion}>Cerrar Sesion</MDBDropdownItem>
+                        </MDBDropdownMenu>
+                    </MDBDropdown>
+                        : <MDBNavbarLink href="/registro" className="justify-content-end yellow-text">
+                            Registrate
+                        </MDBNavbarLink>}
 
                     </MDBNavbarNav>
                 </MDBCollapse>

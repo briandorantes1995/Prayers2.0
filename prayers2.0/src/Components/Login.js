@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth,signInWithGoogle } from '../firebaseConfig';
-import { useAuthState } from "react-firebase-hooks/auth";
+import { Link} from "react-router-dom";
+import {signInWithGoogle } from '../firebaseConfig';
 import './Registro.css';
 import loginEmail from "../Functions/loginEmail";
+import {useUserContext} from "../Context/userContext";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [user, loading, error] = useAuthState(auth);
-    const navigate = useNavigate();
+    const {user} = useUserContext();
     useEffect(() => {
-    }, [navigate, user, loading]);
+    }, [user]);
     async function login() {
         const cuenta = await loginEmail(email, password);
-        console.log(cuenta);
     }
     return (
         <div className="align">
@@ -30,7 +28,7 @@ function Login() {
                             <label>Contraseña: </label>
                             <input type="password" value={password} placeholder="••••••••••••" onChange={(e) => setPassword(e.target.value)} />
                         </div>
-                        <button className="btn-primary" onClick={login} >Iniciar Sesion </button>
+                        <button className="btn-primary" onClick={login}>Iniciar Sesion </button>
                         <button className="btn-primary" onClick={signInWithGoogle}>Inicia Sesion con Google</button>
                     </div>
                     No tienes Cuenta? <Link to="/registro">Registrate</Link>

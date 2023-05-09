@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCarritoContext, emailCarritoItems } from "../Context/carritoContext";
+import {useUserContext} from "../Context/userContext";
 import CarritoCard from './CarritoCard/CarritoCard';
 import "./UI/Individual.css"
 import "./Carrito.css"
@@ -8,11 +9,14 @@ import axios from 'axios';
 
 function CarritoComponent() {
     const { carrito, setCarrito } = useCarritoContext();
-
+    const {user} = useUserContext();
     function isUser() {
-        //crear una funcion donde revise si el usuario esta registrado o no
-        //modificar esta linea
-        return true
+        if(user) {
+            emailCarritoItems(setCarrito)
+            alert("Su producto ha sido comprado con exito")
+        }else {
+            alert("Tiene que registrarse para poder comprar")
+        }
     }
 
     function carritoExists() {
@@ -33,7 +37,9 @@ function CarritoComponent() {
             });
     }
     return (
+        <div>
         <section className="carrito mt-2">
+<<<<<<< HEAD
             {carrito?.map((producto) => (
                 <CarritoCard product={producto} />
             )
@@ -53,6 +59,15 @@ function CarritoComponent() {
 
             }} >Comprar</button>
         </section >
+=======
+        {carrito?.map((producto) => (
+        <CarritoCard product={producto} />
+                        )
+                )}
+                <button className="compra-button" onClick={isUser}>Comprar</button>
+            </section>
+        </div>
+>>>>>>> 62217df82d91aa01d75eb588966ba61506923a9e
     );
 }
 

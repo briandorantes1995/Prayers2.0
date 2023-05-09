@@ -8,7 +8,17 @@ import Home from "./Components/Home";
 import Articulos from "./Components/Articulos";
 import Producto from "./Components/Producto";
 import Carrito from "./Components/Carrito";
+import {auth} from "./firebaseConfig";
+import {useUserContext} from "./Context/userContext";
+import { onAuthStateChanged } from "firebase/auth";
+
 function App() {
+    const { user, setUser } = useUserContext();
+    onAuthStateChanged(auth, (firebaseUser) => {
+        if (firebaseUser) setUser(firebaseUser);
+        if (!firebaseUser) setUser(null);
+        console.log(user);
+    });
     return (
         <Routes >
             <Route  path='/' element={<Home/>}/>
