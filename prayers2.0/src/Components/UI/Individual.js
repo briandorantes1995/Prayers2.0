@@ -24,12 +24,12 @@ function Individual({ articulo }) {
 
     function addToCart() {
         const exist = carrito.find((producto) => {
-            return producto.id == articulo.id
+            return producto.id === articulo.id
         })
 
         if (exist) {
             const inCarrito = carrito.map((producto => {
-                if (producto.id == articulo.id) {
+                if (producto.id === articulo.id) {
                     return { ...producto, cantidad: cantidad }
                 }
                 return producto

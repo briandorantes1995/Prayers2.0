@@ -3,8 +3,6 @@ import './CarritoCard.css'
 import { Link, useLocation } from 'react-router-dom'
 import {
     MDBRow,
-    MDBCol,
-    MDBBtn,
     MDBContainer,
     MDBInput
 } from 'mdb-react-ui-kit';

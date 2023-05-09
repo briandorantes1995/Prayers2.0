@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import {signInWithGoogle } from '../firebaseConfig';
 import './Registro.css';
 import loginEmail from "../Functions/loginEmail";
@@ -7,14 +7,11 @@ import {useUserContext} from "../Context/userContext";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-    const [user,setUser] = useUserContext();
+    const {user} = useUserContext();
     useEffect(() => {
-    }, [navigate]);
+    }, [user]);
     async function login() {
         const cuenta = await loginEmail(email, password);
-        setUser(cuenta.providerId);
-        console.log(user);
     }
     return (
         <div className="align">
