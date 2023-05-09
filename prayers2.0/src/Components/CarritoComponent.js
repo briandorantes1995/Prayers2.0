@@ -26,7 +26,6 @@ function CarritoComponent() {
                 )}
                 <button className="compra-button" onClick={isUser}>Comprar</button>
             </section>
-        <h1>Carrito Vacio</h1>
         </div>
     );
 }

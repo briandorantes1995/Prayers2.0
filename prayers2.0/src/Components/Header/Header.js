@@ -8,10 +8,11 @@ import {
     MDBNavbarNav,
     MDBNavbarLink,
     MDBIcon,
-    MDBCollapse
+    MDBCollapse, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle, MDBDropdown
 } from 'mdb-react-ui-kit';
 import "./Header.css"
 import "../../index.css"
+import cerrarSesion from "../../Functions/cerrarSesion";
 export default function Header() {
     const [showNavSecond, setShowNavSecond] = useState(false);
     const {user} = useUserContext();
@@ -36,10 +37,18 @@ export default function Header() {
 
                     <MDBNavbarNav className='justify-content-end '>
                         {user
-                            ? <MDBNavbarLink className="yellow-text">{user.email}</MDBNavbarLink>
-                            : <MDBNavbarLink href="/registro" className="justify-content-end yellow-text">
-                                Registrate
-                            </MDBNavbarLink>}
+                            ?<MDBDropdown>
+                        <MDBDropdownToggle tag='a' className="yellow-text" role='button'>
+                            <MDBNavbarLink className="yellow-text">{user.email}</MDBNavbarLink>
+                        </MDBDropdownToggle>
+                        <MDBDropdownMenu>
+                            <MDBDropdownItem link>Perfil</MDBDropdownItem>
+                            <MDBDropdownItem link onClick={cerrarSesion}>Cerrar Sesion</MDBDropdownItem>
+                        </MDBDropdownMenu>
+                    </MDBDropdown>
+                        : <MDBNavbarLink href="/registro" className="justify-content-end yellow-text">
+                            Registrate
+                        </MDBNavbarLink>}
 
                     </MDBNavbarNav>
                 </MDBCollapse>
