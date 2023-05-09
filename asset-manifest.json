@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/briandorantes1995/Prayers2.0/static/css/main.c4c4cddb.css",
-    "main.js": "/briandorantes1995/Prayers2.0/static/js/main.6431cb6a.js",
-    "static/js/787.14683b15.chunk.js": "/briandorantes1995/Prayers2.0/static/js/787.14683b15.chunk.js",
-    "static/media/fa-solid-900.ttf": "/briandorantes1995/Prayers2.0/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
-    "static/media/fa-brands-400.ttf": "/briandorantes1995/Prayers2.0/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
-    "static/media/fa-solid-900.woff2": "/briandorantes1995/Prayers2.0/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
-    "static/media/fa-brands-400.woff2": "/briandorantes1995/Prayers2.0/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
-    "static/media/fa-regular-400.ttf": "/briandorantes1995/Prayers2.0/static/media/fa-regular-400.d87474231f4192884802.ttf",
-    "static/media/fa-regular-400.woff2": "/briandorantes1995/Prayers2.0/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
-    "static/media/fa-v4compatibility.ttf": "/briandorantes1995/Prayers2.0/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
-    "static/media/fa-v4compatibility.woff2": "/briandorantes1995/Prayers2.0/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
-    "index.html": "/briandorantes1995/Prayers2.0/index.html",
-    "main.c4c4cddb.css.map": "/briandorantes1995/Prayers2.0/static/css/main.c4c4cddb.css.map",
-    "main.6431cb6a.js.map": "/briandorantes1995/Prayers2.0/static/js/main.6431cb6a.js.map",
-    "787.14683b15.chunk.js.map": "/briandorantes1995/Prayers2.0/static/js/787.14683b15.chunk.js.map"
+    "main.css": "/Prayers2.0/static/css/main.0804e322.css",
+    "main.js": "/Prayers2.0/static/js/main.69799897.js",
+    "static/js/787.14683b15.chunk.js": "/Prayers2.0/static/js/787.14683b15.chunk.js",
+    "static/media/fa-solid-900.ttf": "/Prayers2.0/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/fa-brands-400.ttf": "/Prayers2.0/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/fa-solid-900.woff2": "/Prayers2.0/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/fa-brands-400.woff2": "/Prayers2.0/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/Prayers2.0/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/fa-regular-400.woff2": "/Prayers2.0/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/Prayers2.0/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Prayers2.0/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/Prayers2.0/index.html",
+    "main.0804e322.css.map": "/Prayers2.0/static/css/main.0804e322.css.map",
+    "main.69799897.js.map": "/Prayers2.0/static/js/main.69799897.js.map",
+    "787.14683b15.chunk.js.map": "/Prayers2.0/static/js/787.14683b15.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4c4cddb.css",
-    "static/js/main.6431cb6a.js"
+    "static/css/main.0804e322.css",
+    "static/js/main.69799897.js"
   ]
 }
