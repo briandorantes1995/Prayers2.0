@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
+import { getAuth } from "firebase/auth";
 import {
     MDBContainer,
     MDBNavbar,
     MDBNavbarBrand,
     MDBNavbarToggler,
     MDBNavbarNav,
-    MDBNavbarItem,
     MDBNavbarLink,
     MDBIcon,
     MDBCollapse
 } from 'mdb-react-ui-kit';
 import "./Header.css"
 import "../../index.css"
-
+const auth = getAuth();
+const user = auth.currentUser;
 export default function Header() {
     const [showNavSecond, setShowNavSecond] = useState(false);
-
-    //Modificar esta linea cuando se haga la conexion a la db
-    let getUser = JSON.parse(localStorage.getItem('user-info'))
 
     return (
         <MDBNavbar expand='lg' className='blue mb-0 yellow-text py-3 px-2 h5'>
@@ -39,8 +37,8 @@ export default function Header() {
                     </MDBNavbarNav>
 
                     <MDBNavbarNav className='justify-content-end '>
-                        {getUser
-                            ? <MDBNavbarLink className="yellow-text">{getUser.nombre}</MDBNavbarLink>
+                        {user
+                            ? <MDBNavbarLink className="yellow-text">{user.email}</MDBNavbarLink>
                             : <MDBNavbarLink href="/registro" className="justify-content-end yellow-text">
                                 Registrate
                             </MDBNavbarLink>}

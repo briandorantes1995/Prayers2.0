@@ -25,7 +25,7 @@ function Individual({ articulo }) {
     function deleteFromCart() {
         const carritoActualizado = carrito.filter((producto) => {
             // console.log(producto.id != articulo.id)
-            return producto.id != articulo.id
+            return producto.id !== articulo.id
         })
         setCarrito(carritoActualizado);
         // console.log(carritoActualizado)
