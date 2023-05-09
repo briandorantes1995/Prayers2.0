@@ -15,7 +15,7 @@ function CarritoComponent() {
     function isUser() {
         if (user) {
             emailCarritoItems(setCarrito)
-            alert("Su producto ha sido comprado con exito")
+            alert("Su producto ha sido comprado con exito, se le enviara un correo")
             sendEmail()
         } else {
             alert("Tiene que registrarse para poder comprar")
