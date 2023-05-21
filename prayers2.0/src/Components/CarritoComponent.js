@@ -57,8 +57,16 @@ function CarritoComponent() {
                     <CarritoCard product={producto} />
                 )
                 )}
-                <button className="compra-button" onClick={isUser}>Comprar</button>
+
             </section>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button className="m-auto" onClick={isUser}>Comprar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
