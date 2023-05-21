@@ -20,7 +20,7 @@ function Login() {
         signInWithGoogle();
         navigate("/")
     }
-    
+
     return (
         <div className="align">
             <div className="grid align__item">

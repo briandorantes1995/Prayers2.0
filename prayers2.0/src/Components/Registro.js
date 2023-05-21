@@ -18,8 +18,6 @@ function Registro() {
         try {
             await registerWithEmailAndPassword(name, email, password);
             const cuenta = await loginEmail(email, password);
-            console.log(cuenta);
-
             navigate("/");
         } catch (error) {
             console.log(error)
