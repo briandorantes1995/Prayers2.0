@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCarritoContext, emailCarritoItems } from "../Context/carritoContext";
+import { useCarritoContext, deleteCarritoItems } from "../Context/carritoContext";
 import { useUserContext } from "../Context/userContext";
 import CarritoCard from './CarritoCard/CarritoCard';
 import "./UI/Individual.css"
@@ -10,13 +10,23 @@ import axios from 'axios';
 function CarritoComponent() {
     const { carrito, setCarrito } = useCarritoContext();
     const { user } = useUserContext();
+    const total = carrito.reduce((total, producto) => {
+        return total + ((producto?.price.unit_amount / 100) * producto.cantidad)
+    }, 0)
+
+    const text = carrito.map((producto) => {
+        return "Playera " + producto.name + ": " + ((producto?.price.unit_amount / 100) * producto.cantidad) + "<br>"
+    })
+    console.log(carrito)
+    console.log(text.join(' '))
 
     //const email = user.email
     function isUser() {
         if (user) {
-            emailCarritoItems(setCarrito)
-            alert("Su producto ha sido comprado con exito, se le enviara un correo")
             sendEmail()
+            deleteCarritoItems(setCarrito)
+            alert("Su producto ha sido comprado con exito, se le enviara un correo")
+
         } else {
             alert("Tiene que registrarse para poder comprar")
         }
@@ -27,13 +37,14 @@ function CarritoComponent() {
     }
 
     function sendEmail() {
-        const api = "https://js5fjxrksdee3wvxghqvtmvprq0pwdog.lambda-url.us-east-1.on.aws?email=" + user.email;
+        const api = "https://js5fjxrksdee3wvxghqvtmvprq0pwdog.lambda-url.us-east-1.on.aws?email=" + user.email + "&productosInfo=" + text + "&total=" + total;
+        const data = JSON.stringify({ carrito: carrito, email: user.email, total: total })
 
         axios
-            .post(api,
+            .post(api
             )
             .then((response) => {
-                console.log(response);
+                console.log("response", response);
             })
             .catch((error) => {
                 console.log(error);

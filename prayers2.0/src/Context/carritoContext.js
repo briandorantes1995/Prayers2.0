@@ -41,7 +41,4 @@ export const deleteCarritoItems = (setCarrito) => {
     setCarrito([]);
 }
 
-export const emailCarritoItems = (setCarrito) => {
-    deleteCarritoItems(setCarrito)
 
-}

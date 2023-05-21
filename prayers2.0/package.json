@@ -2,7 +2,6 @@
   "name": "prayers2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://briandorantes1995.github.io/Prayers2.0",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@react-email/render": "^0.0.7",

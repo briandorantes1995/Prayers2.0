@@ -8,8 +8,8 @@ import Home from "./Components/Home";
 import Articulos from "./Components/Articulos";
 import Producto from "./Components/Producto";
 import Carrito from "./Components/Carrito";
-import {auth} from "./firebaseConfig";
-import {useUserContext} from "./Context/userContext";
+import { auth } from "./firebaseConfig";
+import { useUserContext } from "./Context/userContext";
 import { onAuthStateChanged } from "firebase/auth";
 
 function App() {
@@ -17,16 +17,15 @@ function App() {
     onAuthStateChanged(auth, (firebaseUser) => {
         if (firebaseUser) setUser(firebaseUser);
         if (!firebaseUser) setUser(null);
-        console.log(user);
     });
     return (
         <Routes >
-            <Route  path='/' element={<Home/>}/>
-            <Route  path='/producto/:id' element={<Producto/>}/>
-            <Route  path='/carrito' element={<Carrito/>}/>
-            <Route  path='/articulos' element={<Articulos/>}/>
+            <Route path='/' element={<Home />} />
+            <Route path='/producto/:id' element={<Producto />} />
+            <Route path='/carrito' element={<Carrito />} />
+            <Route path='/articulos' element={<Articulos />} />
             <Route path='/login' element={<Login />} />
-            <Route path="/registro" element={<Registro/>} />
+            <Route path="/registro" element={<Registro />} />
             <Route path='/Contactanos' element={<Contactanos />} />
         </Routes>
     );
