@@ -39,7 +39,7 @@ function Login() {
                         <button className="btn-primary" onClick={login}>Iniciar Sesion </button>
                         <button className="btn-primary" onClick={google}>Inicia Sesion con Google</button>
                     </div>
-                    No tienes Cuenta? <Link to="/registro">Registrate</Link>
+                    No tienes Cuenta? <Link style={{color: "#f0f131"}} to="/registro">Registrate</Link>
                 </div>
             </div>
         </div>

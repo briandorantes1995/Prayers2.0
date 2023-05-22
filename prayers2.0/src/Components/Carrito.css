@@ -12,3 +12,8 @@
     border-radius: 50px;
     transition: .3s ease-in-out;
 }
+
+.m-auto{
+    color: #f0f131;
+    background: #90a8ee;
+}
