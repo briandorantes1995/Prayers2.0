@@ -64,7 +64,7 @@
 
 .nft_name,
 .nft_price {
-    color: #f0f131;
+    color: #000;
     font-size: small;
 }
 
@@ -90,7 +90,7 @@
     width: 200px;
     padding: 5px 0;
     font-size: 18px;
-    color: #f0f131;
+    color: #000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.4s;

@@ -42,14 +42,14 @@ function CarritoCard({ product }) {
             </div>
             <MDBContainer className='mt-3  text-white'>
                 <MDBRow>
-                    <h5  style={{color: "#f0f131"}}className='fw-bold text-start '>Cantidad: </h5>
-                    <MDBInput  style={{color: "#f0f131"}} id='typeNumber' type='number' min="1" value={cantidad} onChange={(event) => {
+                    <h5  style={{color: "#000"}}className='fw-bold text-start '>Cantidad: </h5>
+                    <MDBInput  style={{color: "#000"}} id='typeNumber' type='number' min="1" value={cantidad} onChange={(event) => {
                         setCantidad(event.target.value);
                     }} />
                 </MDBRow>
 
 
-                <MDBBtn style={{ background:"#90a8ee", color: "#f0f131"}} onClick={deleteFromCart} className="btn my-2 mb-0" typw="btn">
+                <MDBBtn style={{ background:"#90a8ee", color: "#000"}} onClick={deleteFromCart} className="btn my-2 mb-0" typw="btn">
                     Delete
                 </MDBBtn>
             </MDBContainer>

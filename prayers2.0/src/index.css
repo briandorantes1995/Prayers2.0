@@ -23,7 +23,7 @@ body {
 }
 
 .yellow {
-    background-color: #f0f131;
+    background-color: #000;
 }
 
 .green {
@@ -35,5 +35,5 @@ body {
 }
 
 .yellow-text {
-    color: #f0f131 !important;
+    color: #000 !important;
 }

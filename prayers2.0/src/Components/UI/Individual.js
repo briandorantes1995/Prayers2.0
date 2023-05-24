@@ -56,7 +56,7 @@ function Individual({ articulo }) {
 
     return (
         <div className='position-absolute top-50 start-50 translate-middle container-lg' >
-            <MDBCard style={{ background: "#c5dfe0", color:"#f0f131" }} className='w-75 w-lg-50 h-100 m-auto' alignment='center'>
+            <MDBCard style={{ background: "#c5dfe0", color:"#000" }} className='w-75 w-lg-50 h-100 m-auto' alignment='center'>
                 <MDBRow className='g-0 '>
                     <MDBCol md='4'>
                         <MDBCardImage src={articulo?.images[0]} alt={articulo?.name} fluid />
@@ -68,7 +68,7 @@ function Individual({ articulo }) {
                                 {articulo?.description}
                             </MDBCardText>
                             <MDBCardText>
-                                <small style={{ color: "#f0f131"}}>{(articulo?.price.unit_amount / 100)} </small>
+                                <small style={{ color: "#000"}}>{(articulo?.price.unit_amount / 100)} </small>
                             </MDBCardText>
 
 
@@ -76,7 +76,7 @@ function Individual({ articulo }) {
                             <MDBContainer className='mt-3 w-50'>
                                 <MDBRow>
                                     <h5 className='fw-bold text-start '>Cantidad: </h5>
-                                    <MDBInput  style={{ background: "#c5dfe0", color:"#f0f131" }} id='typeNumber' type='number' min="1" value={cantidad} onChange={(event) => {
+                                    <MDBInput  style={{ background: "#c5dfe0", color:"#000" }} id='typeNumber' type='number' min="1" value={cantidad} onChange={(event) => {
                                         setCantidad(event.target.value);
                                     }} />
                                 </MDBRow>
