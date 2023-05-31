@@ -44,6 +44,7 @@ export default function Header() {
                         <MDBDropdownMenu>
                             <MDBDropdownItem link>Perfil</MDBDropdownItem>
                             <MDBDropdownItem link onClick={cerrarSesion}>Cerrar Sesion</MDBDropdownItem>
+                            <MDBDropdownItem link href="/Reportes">Reportes</MDBDropdownItem>
                         </MDBDropdownMenu>
                     </MDBDropdown>
                         : <MDBNavbarLink href="/registro" className="justify-content-end yellow-text">

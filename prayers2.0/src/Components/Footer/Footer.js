@@ -10,13 +10,13 @@ export default function Footer() {
                 <div className=''>&copy; Players Web - 2023</div>
 
                 <div>
-                    <a href='https://www.facebook.com/Prayersmx' className='me-4 text-reset'>
+                    <a href='https://www.facebook.com/Prayersmx' className='me-4 text-reset 1'>
                         <MDBIcon fab icon="facebook-f" />
                     </a>
-                    <a href='https://www.instagram.com/prayersmx/' className='me-4 text-reset'>
+                    <a href='https://www.instagram.com/prayersmx/' className='me-4 text-reset 2'>
                         <MDBIcon fab icon="instagram" />
                     </a>
-                    <a href='https://github.com/briandorantes1995/Prayers2.0' className='me-4 text-reset'>
+                    <a href='https://github.com/briandorantes1995/Prayers2.0' className='me-4 text-reset 3'>
                         <MDBIcon fab icon="github" />
                     </a>
                 </div>
